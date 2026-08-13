@@ -27,6 +27,7 @@ dependencies = [
     "aiohttp>=3.9.4",
     "httpx>=0.27.0",
     "requests>=2.32.2",
+    "mcp>=1.26.0,<2.0.0",
     "ddgs>=9.9.1",
     "nest_asyncio>=1.5.8",
     "tenacity>=8.0.0",
@@ -134,12 +135,11 @@ server = [
     "psutil>=5.9.0,<8.0.0",
 ]
 
-# Partner channel SDKs + MCP client. Mirrors requirements/partners.txt.
+# Partner channel SDKs. Mirrors requirements/partners.txt.
 # Partners run on the chat agent loop, so there is no engine here — just the
-# IM platform SDKs and the MCP client used for deferred tools.
+# IM platform SDKs.
 partners = [
     "deeptutor[server]",
-    "mcp>=1.26.0,<2.0.0",
     "python-telegram-bot[socks]>=22.6,<23.0",
     "wecom-aibot-sdk>=1.0.8,<2.0.0",
     "lark-oapi>=1.5.0,<2.0.0",
